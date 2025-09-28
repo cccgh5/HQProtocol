@@ -1,10 +1,14 @@
 rootProject.name = getProperty("projectName")
 
 pluginManagement {
+    val paperWeightVersion: String by settings
+
     plugins {
         id("kr.hqservice.resource-generator.bukkit") version "1.0.0"
+        id("io.papermc.paperweight.userdev") version paperWeightVersion apply false
     }
     repositories {
+        maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://maven.hqservice.kr/repository/maven-public")
     }
 }
@@ -17,10 +21,9 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            library("spigot-api", "org.spigotmc:spigot-api:${getProperty("spigotVersion")}")
-            library("paper-api", "io.papermc.paper:paper-api:${getProperty("spigotVersion")}")
-
+            library("paper-api", "io.papermc.paper:paper-api:${getProperty("paperVersion")}")
         }
+
         create("framework") {
             library("core", "kr.hqservice:hqframework-bukkit-core:${getProperty("hqFrameworkVersion")}")
             library("command", "kr.hqservice:hqframework-bukkit-command:${getProperty("hqFrameworkVersion")}")
