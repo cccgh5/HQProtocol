@@ -1,9 +1,9 @@
 package kr.hqservice.protocol.api.world
 
-import kr.hqservice.protocol.api.NMSClass
+import kr.hqservice.protocol.api.NMS
 import org.bukkit.Location
 
-interface NMSLocation : NMSClass<Location> {
+interface NMSLocation : NMS<Location> {
     fun getWorld(): NMSWorld
 
     fun setWorld(world: NMSWorld)

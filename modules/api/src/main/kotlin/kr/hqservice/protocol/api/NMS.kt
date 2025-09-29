@@ -1,5 +1,5 @@
 package kr.hqservice.protocol.api
 
-interface NMSClass<C : Any> {
+interface NMS<C : Any> {
     fun handle(): C
 }

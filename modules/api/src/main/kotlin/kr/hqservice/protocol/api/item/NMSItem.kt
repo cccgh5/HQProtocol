@@ -1,7 +1,7 @@
 package kr.hqservice.protocol.api.item
 
-import kr.hqservice.protocol.api.NMSClass
+import kr.hqservice.protocol.api.NMS
 import org.bukkit.entity.Item
 
-interface NMSItem : NMSClass<Item> {
+interface NMSItem : NMS<Item> {
 }
